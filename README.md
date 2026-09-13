@@ -182,7 +182,17 @@ The main problems I observed were:
 
 The main improvement would be to use more conversation context and better semantic models.
 
-15. One Week Improvement Plan
+15. What Is Misleading About the Headline Number?
+
+The 97.02% escalation accuracy looks very good, but it should not be treated as the overall accuracy of the support agent.
+
+The evaluation set has only 168 examples and only 28 escalation-positive examples. Also, the labels were not independently human-annotated.
+
+The intent classifier itself has 43.42% accuracy, so there is still a lot of room for improvement.
+
+The escalation result is therefore only a development result for one part of the system.
+
+16. One Week Improvement Plan
 
 If I had another week, I would focus on the following:
 
@@ -196,7 +206,7 @@ Fourth, build a dedicated risk classifier instead of relying mainly on keywords 
 
 Finally, run the LLM judge together with human evaluation and compare their scores.
 
-16. How to Run
+17. How to Run
 
 Install the required packages:
 
@@ -236,7 +246,7 @@ python scripts/run_agent.py --message "Where is my Amazon order?"
 The output contains the predicted intent, confidence, retrieved evidence, generated reply and escalation decision.
 
 
-17. Project Structure
+18. Project Structure
 
 hiver-support-agent/
 ├── README.md
@@ -255,7 +265,7 @@ hiver-support-agent/
 ├── scripts/
 └── outputs/
 
-18. Important Design Decisions
+19. Important Design Decisions
 
 Some of the main decisions I made were:
 
@@ -269,14 +279,14 @@ Some of the main decisions I made were:
 - Reporting limitations instead of presenting unavailable evaluation results.
 
 
-19. Dataset Attribution
+20. Dataset Attribution
 
 This project uses the Customer Support on Twitter dataset from Kaggle.
 
 Dataset: thoughtvector/customer-support-on-twitter
 
 
-20. Summary
+21. Summary
 
 This project implements a small retrieval-grounded customer support agent for AmazonHelp.
 

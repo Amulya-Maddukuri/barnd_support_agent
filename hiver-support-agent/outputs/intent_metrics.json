@@ -1,0 +1,62 @@
+{
+  "folds": 5,
+  "n_examples": 168,
+  "classes": [
+    "Amazon_Prime_problem",
+    "account_or_login_problem",
+    "cancellation_request",
+    "delivery_problem",
+    "missing_or_not_received_order",
+    "order_status",
+    "other_unclear",
+    "payment_or_billing_problem",
+    "product_information",
+    "product_problem",
+    "promotion_or_discount",
+    "refund_status",
+    "return_request",
+    "seller_or_marketplace_problem"
+  ],
+  "models": {
+    "majority": {
+      "accuracy_mean": 0.11319073083778966,
+      "accuracy_std": 0.014063933902013813,
+      "macro_f1_mean": 0.014509246088193456,
+      "macro_f1_std": 0.0016483885218998772,
+      "fold_accuracy": [
+        0.11764705882352941,
+        0.08823529411764706,
+        0.11764705882352941,
+        0.12121212121212122,
+        0.12121212121212122
+      ],
+      "fold_macro_f1": [
+        0.015037593984962405,
+        0.011583011583011584,
+        0.015037593984962405,
+        0.015444015444015444,
+        0.015444015444015444
+      ]
+    },
+    "tfidf_logreg": {
+      "accuracy_mean": 0.43422459893048126,
+      "accuracy_std": 0.06637206490755088,
+      "macro_f1_mean": 0.35320861678004534,
+      "macro_f1_std": 0.07486630523599465,
+      "fold_accuracy": [
+        0.4411764705882353,
+        0.5,
+        0.4117647058823529,
+        0.48484848484848486,
+        0.3333333333333333
+      ],
+      "fold_macro_f1": [
+        0.37823129251700677,
+        0.42318594104308394,
+        0.3678571428571428,
+        0.37142857142857144,
+        0.2253401360544218
+      ]
+    }
+  }
+}
